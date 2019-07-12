@@ -3,6 +3,7 @@ import Pokedex from './components/Pokedex/Pokedex'
 import Pokemon from './components/Pokemon/Pokemon'
 import { BrowserRouter as Router, Route,Switch, Link } from "react-router-dom";
 import Home from './components/Pages/Home';
+import Render from './components/axios_react/Render';
 
 function App() {
   const defaultProps = {
@@ -23,7 +24,7 @@ function App() {
    <Switch>
    <Route path='/' exact render={props => <Home {...props} pokemons={defaultProps.pokemon} />} />
    <Route path="/pokemon/:id" exact render={props => <Pokemon {...props} pokemons={defaultProps.pokemon} />}/>
-
+  
    </Switch>
   </Router>
     </div>
